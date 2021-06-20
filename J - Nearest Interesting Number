@@ -1,0 +1,45 @@
+Polycarp knows that if the sum of the digits of a number is divisible by 3, then the number itself is divisible by 3. He assumes that the numbers, the sum of the digits of which is divisible by 4, are also somewhat interesting. Thus, he considers a positive integer n interesting if its sum of digits is divisible by 4.
+Help Polycarp find the nearest larger or equal interesting number for the given number a. That is, find the interesting number n such that n≥a and n is minimal.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int a  ; 
+  std::cin >> a;
+ 
+  for (int i = a ;  ; i++ ){
+      int temp = i;
+     int sum  = 0 ;
+    while (temp > 0){
+        sum += temp % 10 ;
+        temp /=  10 ;
+    }
+    if (sum % 4 == 0){
+          std::cout << i <<"\n";
+          break;
+    }
+  }
+// int n  , a , b , c ; 
+//  cin >> n ;
+//     int sum = 0 ; 
+//   for (int i = 0; i < n; i++) {
+//       std::cin >> a , b ,  c ;
+       
+//          if (a ==1  && b==1 ||a == 1 && c == 1 ||   b == 1 &&  c== 1   ){
+//             sum++;
+//          }
+    
+//   }
+//   std::cout << sum << "\n";
+//  int  k , n , w  ; 
+//  std::cin >> k >> n >> w ;
+//   int sum = 0 ;
+//   for (int i = 1; i <= w; i++) {
+//         sum += i  * k ; 
+//   }
+//   std::cout << abs (sum-n) << "\n";
+    return 0;
+}
